@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "fin-tracker"
+version = "0.1.0"
+description = ""
+authors = ["nikola864 <kolyab89217115399@mail.ru>"]
+readme = "README.md"
+packages = [{include = "fin_tracker"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.128.6"
+pydantic-settings = "^2.12.0"
+python-dotenv = "^1.2.1"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.46"}
+asyncpg = "^0.31.0"
+structlog = "^25.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
