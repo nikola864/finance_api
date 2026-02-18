@@ -1,10 +1,7 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from decimal import Decimal
 from datetime import datetime
 from typing import List
-from .transaction import TransactionRead
-from .budget import BudgetRead
-
 
 class TransactionStatistics(BaseModel):
     total_count: int
@@ -15,13 +12,11 @@ class TransactionStatistics(BaseModel):
     period_start: datetime
     period_end: datetime
 
-
 class BudgetStatistics(BaseModel):
     total_budgets: int
     active_budgets: int
     total_amount: Decimal
     average_amount: Decimal
-
 
 class FinancialSummary(BaseModel):
     total_income: Decimal

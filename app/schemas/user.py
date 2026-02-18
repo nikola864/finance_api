@@ -1,7 +1,6 @@
 from pydantic import BaseModel, Field, EmailStr, field_validator
 from typing import Optional
 from datetime import datetime
-from .enum import TransactionTypeSchema, CategoryTypeSchema, BudgetPeriodSchema
 
 class UserCreate(BaseModel):
     username: str = Field(..., min_length=3, max_length=50)

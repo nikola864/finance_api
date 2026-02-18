@@ -1,8 +1,7 @@
-from pydantic import BaseModel, Field, computed_field
+from pydantic import BaseModel, Field, computed_field, field_validator
 from decimal import Decimal
 from typing import Optional, Literal
 from datetime import datetime, timezone
-from .enum import BudgetPeriodSchema
 from .category import CategoryRead
 
 
